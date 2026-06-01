@@ -30,8 +30,8 @@ export default {
         ivory: '#F5F0E8',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        arabic: ['"Noto Naskh Arabic"', '"Noto Sans Arabic"', 'Arial', 'sans-serif'],
+        sans: ['Alexandria', 'system-ui', '-apple-system', 'sans-serif'],
+        arabic: ['Alexandria', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

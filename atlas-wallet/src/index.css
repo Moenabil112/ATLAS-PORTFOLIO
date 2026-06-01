@@ -2,23 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Alexandria Variable Font (self-hosted) ─────────────────────────── */
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fonts/AlexandriaVariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-obsidian text-ivory font-sans;
+    @apply bg-obsidian text-ivory;
+    font-family: 'Alexandria', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  #root {
-    @apply min-h-screen;
+  /* Arabic RTL — Alexandria covers Arabic script natively */
+  [dir="rtl"] {
+    font-family: 'Alexandria', system-ui, sans-serif;
   }
 
-  [dir="rtl"] {
-    font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', Arial, sans-serif;
+  #root {
+    @apply min-h-screen;
   }
 }
 
