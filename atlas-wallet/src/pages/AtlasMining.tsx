@@ -1,5 +1,6 @@
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import DisclaimerBox from '../components/DisclaimerBox'
 
 export default function AtlasMining() {
   const { lang } = useLanguage()
@@ -53,8 +54,11 @@ export default function AtlasMining() {
           </div>
         </section>
 
+        {/* Indicative disclaimer */}
+        <DisclaimerBox />
+
         {/* Note */}
-        <div className="mt-8 border-l-2 border-graphite-mid px-4 py-3">
+        <div className="mt-6 border-l-2 border-graphite-mid px-4 py-3">
           <p className="text-xs text-sand/40 italic leading-relaxed">{t.note}</p>
         </div>
       </div>
