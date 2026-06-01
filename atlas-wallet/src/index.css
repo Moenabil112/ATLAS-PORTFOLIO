@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-obsidian text-ivory font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Noto Naskh Arabic', 'Noto Sans Arabic', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-gold text-obsidian font-medium text-sm tracking-wide
+    border border-gold hover:bg-gold-light hover:border-gold-light transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-gold/50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 bg-transparent text-gold font-medium text-sm tracking-wide
+    border border-gold/50 hover:border-gold hover:text-gold-light transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-gold/30;
+  }
+
+  .card-institutional {
+    @apply bg-graphite border border-graphite-mid hover:border-gold/30 transition-all duration-300;
+  }
+
+  .section-divider {
+    @apply border-t border-graphite-mid/50 my-16;
+  }
+
+  .page-container {
+    @apply max-w-6xl mx-auto px-6 py-16;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-gold/70;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl font-light tracking-tight text-ivory;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-light tracking-tight text-ivory;
+  }
+
+  .heading-md {
+    @apply text-xl md:text-2xl font-medium text-ivory;
+  }
+
+  .body-text {
+    @apply text-sand leading-relaxed;
+  }
+
+  .disclaimer-text {
+    @apply text-xs text-sand/60 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .border-gold-dim {
+    border-color: rgba(184, 150, 46, 0.2);
+  }
+}
